@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/jordanwheeler/face
+  revision: 787de74742225152c27df69d2a49534dd8d3111c
+  specs:
+    face (0.0.7)
+      json (>= 1.4.6)
+      rest-client (>= 1.6.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -47,9 +55,6 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    face (0.0.7)
-      json (>= 1.4.6)
-      rest-client (>= 1.6.1)
     hike (1.2.2)
     i18n (0.6.1)
     journey (1.0.4)
@@ -117,7 +122,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   debugger
-  face
+  face!
   jquery-rails
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)

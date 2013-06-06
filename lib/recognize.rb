@@ -8,7 +8,15 @@ require 'debugger'
     yield
   end
 
-  def new_entry(urls, name)
+  def individual_entry(urls, name)
+    with_session do
+      uid = name.downcase.gsub(/\s/, '_') +"@shopify"
+      get_tid(urls)
+      save_tags(@tid, uid, name)
+    end
+  end
+
+  def group_entry(urls, name)
     with_session do
       uid = name.downcase.gsub(/\s/, '_') +"@shopify"
       get_tid(urls)
