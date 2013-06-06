@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  guru_id: 
+  candidate_id: 
+  url: MyString
+  pid: MyString
+  tid: MyString
+  uids: MyString
+
+two:
+  guru_id: 
+  candidate_id: 
+  url: MyString
+  pid: MyString
+  tid: MyString
+  uids: MyString

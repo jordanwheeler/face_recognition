@@ -16,16 +16,15 @@ require 'debugger'
     end
   end
 
-  def group_entry(urls, name)
+  def group_entry(url, name)
     with_session do
       uid = name.downcase.gsub(/\s/, '_') +"@shopify"
-      get_tid(urls)
-      save_tags(@tid, uid, name)
+      x = @client.faces_group(urls: url)
     end
   end
 
-  def get_tid(urls)
-      x = @client.faces_detect(urls: [urls])
+  def get_tid(url)
+      x = @client.faces_detect(urls: url)
       @tid = x['photos'].first['tags'].first['tid']
   end
 
@@ -34,9 +33,9 @@ require 'debugger'
       @client.faces_train(uids: uid)
   end
 
-  def recognize(uids, urls)
+  def recognize(url)
     with_session do
-      x = @client.faces_recognize(uids: [uids], urls: [urls])
+      x = @client.faces_recognize(uids: 'all@shopify', urls: url)
       x['photos'].first['tags'].first['uids']
     end
   end
