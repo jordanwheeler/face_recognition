@@ -1,0 +1,3 @@
+class ForgotNgrok < ApplicationController
+
+end
