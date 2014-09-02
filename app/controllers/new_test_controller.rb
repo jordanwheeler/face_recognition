@@ -1,3 +1,0 @@
-class NewTestController < ApplicationController
-
-end
